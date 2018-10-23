@@ -1,0 +1,48 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* All Pages */
+
+.flashes {
+  margin-top: 40px;
+}
+
+
+
+/* Index page */
+
+.well.profile-black-white {
+    background-color: #ffffff;
+    border: 9px solid black;
+    border-radius: 25px;
+}
+
+.well.profile-black-white-thin {
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.well.profile-black-white-thin-b {
+    background-color: #e6f7ff;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.bttn {
+  border: 2px solid white;
+}
+
+
+.texties {
+  font-family: arial;
+}
+
+.spacer {
+  visibility: hidden;
+}
+
+.BoldText {
+  font-weight: bold; 
+  
+}

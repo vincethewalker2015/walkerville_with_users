@@ -1,19 +1,27 @@
-<div class= "well">
-  <h2 align="center"> All Topics</h2>
+<div class="row">
+  <div class= "well">
+    <h2 align="center"> All Topics</h2>
+  </div>
+
+
+
+  <div class="col-md-6 col-md-offset-3">
+      <table align="center">
+        <tr>
+          <th>Name</th>
+          <th class="spacer">gkdgdkdgklbkLJDGLK</th>
+          <th>Description</th>
+        </tr>
+    <% @topics.each do |top| %>
+      <tr class ="well profile-black-white-thin row <%= cycle('profile-black-white-thin-b', '') %>"> 
+                <td class="texties"><span class="BoldText"><%= top.name %></span></td>
+                <td class="texties"><%= top.description %></td>
+                <td><%= link_to "Edit", edit_topic_path(top), class: "btn btn-warning bttn" %></td>
+                <td><%= link_to "View", topic_path(top), class: "btn btn-info bttn" %></td>
+                <td><%= link_to "Delete", topic_path(top), method: :delete, data: {confirm: "Are you sure??"}, class: "btn btn-danger bttn" %></td>
+            </tr>
+
+    <% end %>
+    </table>
+  </div>
 </div>
-
-
-<table align="center">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <% @topics.each do |top| %>
-<tr>
-  <td><%= top.name %></td>
-  <td><%= top.description %></td>
-</tr>
-
-
-<% end %>
-</table>
