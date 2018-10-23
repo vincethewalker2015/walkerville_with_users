@@ -1,0 +1,15 @@
+<div class="well">
+  <h2 align="center">Show</h2>
+</div>
+
+<p>
+  Name: <%= @topic.name %>
+</p>
+<br />
+<p>
+  Description: <%= @topic.description %>
+</p>
+
+<p><%= link_to "index", topics_path %> || <%= link_to "Delete", topic_path(@topic), method: :delete, data: {confirm: "Are you sure?"} %></p>
+
+

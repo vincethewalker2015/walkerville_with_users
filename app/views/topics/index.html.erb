@@ -1,0 +1,19 @@
+<div class= "well">
+  <h2 align="center"> All Topics</h2>
+</div>
+
+
+<table align="center">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% @topics.each do |top| %>
+<tr>
+  <td><%= top.name %></td>
+  <td><%= top.description %></td>
+</tr>
+
+
+<% end %>
+</table>

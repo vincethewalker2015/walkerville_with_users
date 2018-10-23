@@ -1,0 +1,8 @@
+<% if @topic.errors.any? %>
+  <h3>The following errors prevented this topicfrom being saved</h3>
+  <ul>
+    <% @topic.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
