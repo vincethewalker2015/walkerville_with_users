@@ -3,6 +3,34 @@
 
 /* All Pages */
 
+body {
+  background: #314755;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #26a0da, #314755);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #26a0da, #314755); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  
+  background-size: cover;
+  
+}
+
+/* Pages Section */
+.jumbotron {
+  background-color: transparent;
+  color: #fff;
+  
+}
+
+/* Topics Section */
+
+.well {
+  background-color: transparent;
+  border: 3px solid white;
+  color: #fff;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 .flashes {
   margin-top: 40px;
 }
@@ -11,22 +39,22 @@
 
 /* Index page */
 
-.well.profile-black-white {
-    background-color: #ffffff;
-    border: 9px solid black;
-    border-radius: 25px;
+.well-index {
+    background-color: transparent;
+    color: #fff;
 }
 
-.well.profile-black-white-thin {
-    background-color: #ffffff;
-    border: 1px solid black;
-    border-radius: 25px;
-}
 
 .well.profile-black-white-thin-b {
     background-color: #e6f7ff;
     border: 1px solid black;
     border-radius: 25px;
+}
+
+.index-block {
+  border: 2px solid white;
+  margin-bottom: 8px;
+  padding-bottom: 3px;
 }
 
 .bttn {
@@ -46,3 +74,23 @@
   font-weight: bold; 
   
 }
+
+.descriptionText {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+/* Form section */
+
+.forn-group .form-control {
+  background-color: transparent;
+  border: 3px solid white;
+  color: #fff;
+  font-weight: bold;
+}
+
+.labled {
+  color: white;
+}
+
