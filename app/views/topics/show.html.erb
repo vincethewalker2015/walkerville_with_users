@@ -8,7 +8,7 @@
       <h4>
         Name: <%= @topic.name %>
       </h4>
-      <p class="image-frame"><%= image_tag @topic.picture.url if @topic.picture? %></p>
+      <p align="center"><%= image_tag @topic.picture.url, class: "showImage" if @topic.picture? %></p>
       <br />
       <h5>
         Description: <%= @topic.description %>
