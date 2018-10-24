@@ -8,7 +8,7 @@
                 <%= f.label :name, class: 'labled' %> 
              </div>
              <div class="col-md-8">
-               <%= f.text_field :name, class: 'form-control', placeholder: "Name of todo", autofocus: true %>
+               <%= f.text_field :name, class: 'form-control', placeholder: "Name of topic", autofocus: true %>
              </div>
            </div>
           
@@ -17,7 +17,16 @@
                 <%= f.label :description, class: 'labled' %> 
              </div>
              <div class="col-md-8">
-               <%= f.text_area :description, rows: 5, class: 'form-control', placeholder: "Add todo description" %>
+               <%= f.text_area :description, rows: 5, class: 'form-control', placeholder: "Add topic description" %>
+             </div>
+           </div>
+           
+            <div class="form-group">
+             <div class="control-label col-md-2">
+                <%= f.label :picture, class: 'labled' %> 
+             </div>
+             <div class="col-md-8">
+               <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png', class: 'form-control', placeholder: "Add picture here.." %>
              </div>
            </div>
           
@@ -35,3 +44,12 @@
    
   </div>
 </div>
+
+<script type="text/javascript">
+   $(‘#topic_picture').bind('change', function() {
+     var size_in_megabytes = this.files[0].size/1024/1024;
+     if (size_in_megabytes > 5) {
+       alert('Maximum file size is 5MB. Please choose a smaller file.');
+     }
+   });
+ </script>

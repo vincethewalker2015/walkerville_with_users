@@ -27,6 +27,11 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Use Carrierwave to upload and store images
+gem 'carrierwave', '1.2.2'
+# Use ImageMagick for image editing
+gem 'mini_magick', '4.7.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -54,6 +59,7 @@ end
 group :production do
   # Use Postgres as the database in production (For Herohu)
   gem 'pg'
+  gem 'fog', '1.42'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

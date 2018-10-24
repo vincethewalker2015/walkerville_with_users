@@ -3,11 +3,12 @@
 </div>
 
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
+  <div class="col-md-6 col-md-offset-3">
     <div class="well">
       <h4>
         Name: <%= @topic.name %>
       </h4>
+      <p class="bttn"><%= image_tag @topic.picture.url if @topic.picture? %></p>
       <br />
       <h5>
         Description: <%= @topic.description %>
