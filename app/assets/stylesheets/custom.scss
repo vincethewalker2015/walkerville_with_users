@@ -98,12 +98,62 @@ body {
 
 .image-frame {
   border: 3px solid white;
-  object-fit: cover;
+  /*object-fit: cover; */
+  
   
 }
 
 .showImage {
    border: 3px solid white;
    border-radius: 5px;
+     
+  }
+  
+ /* For I phoneX */
+ 
+ @media only screen 
+  and (min-device-width : 375px) 
+  and (max-device-width : 812px) {
+    
+    img {
+    width: 100%;
+    height: auto;
+}
+  
 }
 
+ /* For I phone 6/7/8 */
+ 
+ @media only screen 
+  and (min-device-width : 375px) 
+  and (max-device-width : 667px) {
+     img {
+    width: 100%;
+    height: auto;
+}
+    
+  }
+  
+ /* For I phone 6/7/8 Plus versions */
+ 
+ @media only screen 
+  and (min-device-width : 414px) 
+  and (max-device-width : 736px) {
+     img {
+    width: 100%;
+    height: auto;
+}
+    
+  }
+  
+  /* For I Phone 5's */
+  
+  @media only screen 
+  and (min-device-width : 320px) 
+  and (max-device-width : 568px) {
+    img {
+    width: 100%;
+    height: auto;
+}
+    
+  }
