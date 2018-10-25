@@ -4,9 +4,10 @@
 /* All Pages */
 
 body {
-  background: #314755;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #26a0da, #314755);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #26a0da, #314755); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #c31432;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
   
@@ -103,11 +104,22 @@ body {
   
 }
 
-.showImage {
-   border: 3px solid white;
-   border-radius: 5px;
-     
-  }
+/* USERS SECTION */
+
+
+  
+.IndexSize {
+  width: 30%;
+  height: auto;
+  border: 3px solid white;
+  border-radius: 5px;
+   
+}
+  
+  
+/* REDUCING SCREEN SIZES THROUGH DIFFERENT BROWSER WINDOWS */
+
+/* IPHONES */
   
  /* For I phoneX */
  
@@ -156,4 +168,50 @@ body {
     height: auto;
 }
     
+}
+
+                                              /* IPADS  */
+
+/* Ipad */
+
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) {
+     img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* Ipad 3 & 4 */
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    img {
+      width: 100%;
+      height: auto;
+  }
+  }
+  
+  /* Ipad 1 & 2 */
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    img {
+      width: 100%;
+      height: auto;
+  }
+  }
+  
+  /* Ipad Mini */
+  @media only screen 
+  and (min-device-width : 768px) 
+  and (max-device-width : 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    img {
+      width: 100%;
+      height: auto;
+  }
   }

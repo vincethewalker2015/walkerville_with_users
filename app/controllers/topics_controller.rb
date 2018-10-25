@@ -10,9 +10,10 @@ class TopicsController < ApplicationController
   
   def create
     @topic = Topic.new(topic_params)
-   if  @topic.save
-     flash[:success] = "post sucessfully created"
-    redirect_to topic_path(@topic)
+    @topic.user = User.first
+   if @topic.save
+      flash[:success] = "post sucessfully created"
+      redirect_to topic_path(@topic)
    else
     render 'new'
    end
