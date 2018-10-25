@@ -5,6 +5,7 @@
 <div align="center">
         <p>
           <%= link_to "Create a Blog", new_topic_path, class: "btn btn-success bttn" %>
+          <%= link_to "View all Blogs", topics_path, class: "btn btn-primary bttn" %>
         </p>
            <div align="center">
              
@@ -14,7 +15,7 @@
                <p align="center"><%= image_tag user.picture.url, class: "IndexSize" if user.picture? %></p>
                <br />
                <h5>Email: <%= user.email %></h5>
-               <%= link_to "View", user_path(user), class: "btn btn-info bttn" %>
+               <%= link_to "View User", user_path(user), class: "btn btn-info bttn" %>
                
                   <%= link_to "Edit", edit_user_path(user), class: "btn btn-warning bttn" %>
                   <%= link_to "Delete", user_path(user), method: :delete, data: {confirm: "Are you sure??"}, 
