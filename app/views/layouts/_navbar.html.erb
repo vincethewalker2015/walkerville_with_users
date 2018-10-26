@@ -12,8 +12,11 @@
               <li><%= link_to "Create Your Profile", new_user_path %></li>
               <li><%= link_to "Create a Blog", new_topic_path %></li>
               <li><%= link_to "All Blogs", topics_path %></li>
-              <li><%= link_to "Log in", login_path, class: "btn btn-success nav-button" %></li>
-              <li><%= link_to "Log out", login_path, method: :delete, class: "btn btn-danger nav-button" %></li>
+              <% if logged_in? %>
+                <li><%= link_to "Log out", login_path, method: :delete, class: "btn btn-danger nav-button" %></li>
+              <% else %>
+                <li><%= link_to "Log in", login_path, class: "btn btn-success nav-button" %></li>
+              <% end %>
             </ul>
           </nav>
         </div>

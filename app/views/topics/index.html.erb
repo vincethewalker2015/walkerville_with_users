@@ -13,7 +13,7 @@
                <h4>Topic: <%= top.name %></h4>
                <h5>Description: <%= top.description %></h5>
                <%= link_to "View", topic_path(top), class: "btn btn-info bttn" %>
-                <% if logged_in? && current_user == top.user %>
+                <% if logged_in? && (current_user == top.user || current_user.admin?) %>
                   <%= link_to "Edit", edit_topic_path(top), class: "btn btn-warning bttn" %>
                   <%= link_to "Delete", topic_path(top), method: :delete, data: {confirm: "Are you sure??"}, 
                                                                       class: "btn btn-danger bttn" %> 
