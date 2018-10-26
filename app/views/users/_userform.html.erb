@@ -28,6 +28,25 @@
                <%= f.file_field :picture, accept: 'image/jpeg, image/gif, image/png', class: 'form-control', placeholder: "Add picture here.." %>
              </div>
            </div>
+           
+           <div class="form-group">
+             <div class="control-label col-md-2">
+                <%= f.label :password, class: 'labled' %> 
+             </div>
+             <div class="col-md-8">
+               <%= f.password_field :password, class: 'form-control', placeholder: "Create a Password..." %>
+             </div>
+           </div>
+           
+            <div class="form-group">
+             <div class="control-label col-md-2">
+                <%= f.label :password_confirmation, class: 'labled' %> 
+             </div>
+             <div class="col-md-8">
+               <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Please re-enter your password.." %>
+             </div>
+           </div>
+
 
          <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">

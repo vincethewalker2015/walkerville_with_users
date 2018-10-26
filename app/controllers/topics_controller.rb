@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
   
   def index
     @topics = Topic.all
@@ -51,5 +53,11 @@ class TopicsController < ApplicationController
     params.require(:topic).permit(:name, :description, :picture)
   end
   
+  def require_same_user
+    if current_user != @topic.user
+      flash[:danger] = "You can only edit or delete your own Blogs"
+      redirect_to topics_path
+    end
+  end
   
 end
