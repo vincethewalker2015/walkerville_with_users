@@ -8,27 +8,21 @@
         </p>
            <div align="center">
              
-               <% @topics.each do |top| %>
+          <% @topics.each do |top| %>
              <div class="col-md-4 col-md-offset-4 well-index index-block" %>
                <h4>Topic: <%= top.name %></h4>
                <p><%= image_tag top.picture.url, class: "IndexSize" if top.picture? %></p>
                <h5>Description: <%= top.description %></h5>
                <%= link_to "View", topic_path(top), class: "btn btn-info bttn" %>
-                <% if logged_in? && (current_user == top.user || current_user.admin?) %>
+               <% if logged_in? && (current_user == top.user || current_user.admin?) %>
                   <%= link_to "Edit", edit_topic_path(top), class: "btn btn-warning bttn" %>
                   <%= link_to "Delete", topic_path(top), method: :delete, data: {confirm: "Are you sure??"}, 
                                                                       class: "btn btn-danger bttn" %> 
                  <% end %><br />
                  <p class="createdByText"><span class="createdHeader">created by:</span> <%=top.user.name %></p>
-              
+                     <small>Comments: <%= top.comments.count %></small></p>
              </div>
-              
            <% end %>
-             
         </div>
-        
     </div>
-   
-
-  
 </div>

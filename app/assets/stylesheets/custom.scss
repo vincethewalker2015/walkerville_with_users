@@ -4,9 +4,10 @@
 /* All Pages */
 
 body {
-  background: #c31432;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #E6DADA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 
 
@@ -149,6 +150,22 @@ body {
   border: 3px solid white;
   border-radius: 5px;
    
+}
+
+/* COMMENTS SECTION */
+
+.comment-bar {
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.comment-block {
+  margin-left: 15px;
+}
+
+.com-bttn {
+  border: 2px solid white;
+  margin-left: 15px;
 }
 
 
