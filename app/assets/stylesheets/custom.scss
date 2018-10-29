@@ -8,10 +8,6 @@ body {
   background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-
-
-
-  
   background-size: cover;
   
 }
@@ -126,6 +122,13 @@ body {
   color: white;
 }
 
+/* Change the placeholder text color */
+ .form-control::-webkit-input-placeholder { color: white; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: white; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: white; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: white; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: white; }  /* Microsoft Edge */
+
 /* Show Page */
 
 .image-frame {
@@ -166,6 +169,12 @@ body {
 .com-bttn {
   border: 2px solid white;
   margin-left: 15px;
+}
+
+.com-form {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
 }
 
 

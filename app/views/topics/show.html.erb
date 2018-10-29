@@ -18,7 +18,9 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2 comment-bar">
             <% if @topic.comments.count > 0 %>
-             Comments: <span class="createdHeader"><%= render partial: 'comments/comments', object: @comments %></span>
+            <div id="messages">
+               Comments: <span class="createdHeader"><%= render partial: 'comments/comments', object: @comments %></span>
+            </div>
             <% else %>
               <h5>No Comments Yet..</h5>
             <% end %>

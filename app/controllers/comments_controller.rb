@@ -6,7 +6,8 @@ class CommentsController < ApplicationController
     @comment = @topic.comments.build(comment_params)
     @comment.user = current_user
     if @comment.save
-      redirect_to topic_path(@topic)
+      ActionCable.server.broadcast "comments", render(partial: 'comments/comment', object: @comment)
+      #redirect_to topic_path(@topic)
     else
       flash[:danger] = "Comment was not created, Try again!"
       redirect_to :back

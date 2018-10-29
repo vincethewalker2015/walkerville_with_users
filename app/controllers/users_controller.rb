@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user
+  before_action :require_user, except: [:new]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   before_action :require_admin, only: [:destroy]
   
@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
    if @user.save
       session[:user_id] = @user.id
+      cookies.signed[:user_id] = @user.id
       flash[:success] = "Your Profile has been created"
       redirect_to user_path(@user)
    else
