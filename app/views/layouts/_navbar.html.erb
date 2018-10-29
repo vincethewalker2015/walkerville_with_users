@@ -7,6 +7,11 @@
               	<span class="icon-bar"></span>                        
             </button>
          <div class="collapse navbar-collapse" id="myNavbar">
+           <ul class="nav navbar-nav navbar-left">
+             <% if logged_in? %>
+               <li><%= image_tag current_user.picture.url, class: "thumbSize" if current_user.picture? %> <span class="nav-text"><%= current_user.name if current_user %></span></li>
+             <% end %>
+           </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Home", root_path %></li>
               <li><%= link_to "Create Your Profile", new_user_path %></li>

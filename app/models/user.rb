@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates :email, presence: true
   
   has_many :topics, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_secure_password
   
   mount_uploader :picture, PictureUploader

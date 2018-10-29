@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
   before_action :require_user, except: [:index, :show]
-  before_action :require_same_user, only: [:edit, :update, :destroy]
+  #before_action :require_same_user, only: [:edit, :update, :destroy]
+  
   
   def index
     @topics = Topic.all
@@ -12,7 +13,7 @@ class TopicsController < ApplicationController
   
   def create
     @topic = Topic.new(topic_params)
-    @topic.user = User.first
+    @topic.user = current_user
    if @topic.save
       flash[:success] = "post sucessfully created"
       redirect_to topic_path(@topic)
@@ -24,6 +25,7 @@ class TopicsController < ApplicationController
   
   def show
     @topic = Topic.find(params[:id])
+    @comments = @topic.comments
   end
   
   def edit

@@ -46,6 +46,21 @@ body {
   border: 2px solid white;
 }
 
+.nav-text {
+  color: white;
+  margin-top: 20px;
+}
+
+.thumbSize {
+  width: 10%;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 10%;
+  margin-top: 5px;
+
+}
+  
+
 /* Index page */
 
 .well-index {
@@ -124,6 +139,8 @@ body {
 .showImage {
   border: 3px solid white;
   border-radius: 5px;
+  width: 50%;
+  height: auto;
 }
   
 .IndexSize {
@@ -133,7 +150,8 @@ body {
   border-radius: 5px;
    
 }
-  
+
+
   
 /* REDUCING SCREEN SIZES THROUGH DIFFERENT BROWSER WINDOWS */
 

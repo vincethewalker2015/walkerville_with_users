@@ -13,6 +13,13 @@
       <h5>
         Description: <%= @topic.description %>
       </h5>
+       <h5>
+        <% if @topic.comments.count > 0 %>
+         Comments: <span class="createdHeader"><%= render partial: 'comments/comments', object: @comments %></span>
+        <% else %>
+          <span>No Comments Yet..</span>
+        <% end %>
+      </h5>
       
       <p><%= link_to "Index", topics_path, class: "btn btn-primary bttn" %>
          <%= link_to "Edit", edit_topic_path, class: "btn btn-warning bttn" %>

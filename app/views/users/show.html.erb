@@ -10,6 +10,11 @@
       <h5>
         Email: <%= @user.email %>
       </h5>
+      <% if @user.topics.count !=0 %>
+        <h6>Blogs created: <%= @user.topics.count %></h6>
+      <% else %>
+        <h5>You haven't created any blogs yet...</h5>
+      <% end %>
       
       <p><%= link_to "All Users", users_path, class: "btn btn-primary bttn" %>
          <%= link_to "Edit", edit_user_path, class: "btn btn-warning bttn" %>
