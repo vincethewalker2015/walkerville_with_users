@@ -60,6 +60,7 @@ group :production do
   # Use Postgres as the database in production (For Herohu)
   gem 'pg'
   gem 'fog', '1.42'
+  gem 'redis', '~> 3.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
