@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :require_user, except: [:new]
+  #before_action :require_user, except: [:new, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
   before_action :require_admin, only: [:destroy]
   
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:name, :email, :picture)
+    params.require(:user).permit(:name, :email, :picture, :password, :password_confirmation)
   end
   
   def require_same_user
