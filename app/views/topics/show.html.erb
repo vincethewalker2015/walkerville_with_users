@@ -16,14 +16,17 @@
          <%= render 'comments/newcomment' %>
        <% end %>
         <div class="row">
-          <div class="col-md-8 col-md-offset-2 comment-bar">
-            <% if @topic.comments.count > 0 %>
+          <div class="col-md-8 col-md-offset-2">
+            <h4>Comments:</h4>
+            <div class="comment-bar">
+              <% if @topic.comments.count > 0 %>
             <div id="messages">
-               Comments: <span class="createdHeader"><%= render partial: 'comments/comments', object: @comments %></span>
+               <span class="createdHeader"><%= render partial: 'comments/comments', object: @comments %></span>
             </div>
             <% else %>
               <h5>No Comments Yet..</h5>
             <% end %>
+            </div>
           </div>
         </div>
       <br />
