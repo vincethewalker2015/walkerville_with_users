@@ -226,6 +226,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
     width: 100%;
     height: auto;
 }
+.lable-disappear {
+    display: none
+  }
   
 }
 
@@ -242,6 +245,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
   margin-left: 20px;
   margin-right: 20px;
 }
+.lable-disappear {
+    display: none
+  }
     
   }
   
@@ -254,6 +260,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
     width: 100%;
     height: auto;
 }
+.lable-disappear {
+    display: none
+  }
     
   }
   
@@ -269,7 +278,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
 .index-block{
   margin-left: 20px;
   margin-right: 20px;
-}    
+}  
+.lable-disappear {
+    display: none
+  }
 }
 
                                               /* IPADS  */
@@ -283,6 +295,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
       width: 100%;
       height: auto;
   }
+  .detail-class {
+   display: none !important;
+}
+  .lable-disappear {
+    display: none
+  }
 }
 
 /* Ipad 3 & 4 */
@@ -293,6 +311,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
     img {
       width: 100%;
       height: auto;
+  }
+  .lable-disappear {
+    display: none
   }
   }
   
@@ -305,6 +326,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
       width: 100%;
       height: auto;
   }
+  .lable-disappear {
+    display: none
+  }
   }
   
   /* Ipad Mini */
@@ -315,5 +339,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3e2c7', end
     img {
       width: 100%;
       height: auto;
+  }
+  .lable-disappear {
+    display: none
   }
   }
